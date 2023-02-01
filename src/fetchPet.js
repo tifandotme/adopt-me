@@ -6,7 +6,7 @@ async function fetchPet({ queryKey }) {
   if (!apiRes.ok) {
     throw new Error("Failed to fetch pet");
   }
-  
+
   return apiRes.json();
 }
 
