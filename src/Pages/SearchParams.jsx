@@ -45,8 +45,7 @@ const SearchParams = () => {
             animal: formData.get("animal") ?? "",
             breed: formData.get("breed") ?? "",
             location: formData.get("location") ?? "",
-            
-          }
+          };
           setRequestParams(obj);
         }}
       >
@@ -55,16 +54,11 @@ const SearchParams = () => {
             <img src={adoptedPet.images[0]} alt={adoptedPet.name} />
             <p>{adoptedPet.name}</p>
           </div>
-        ) : null
-        }
+        ) : null}
 
         <label htmlFor="location">
           Location
-          <input
-            name="location"
-            id="location"
-            placeholder="Location"
-          />
+          <input name="location" id="location" placeholder="Location" />
         </label>
 
         <label htmlFor="animal">
@@ -85,11 +79,7 @@ const SearchParams = () => {
 
         <label htmlFor="breed">
           Breed
-          <select
-            disabled={!breeds.length}
-            id="breed"
-            name="breed"
-          >
+          <select disabled={!breeds.length} id="breed" name="breed">
             <option />
             {breeds.map((breed) => (
               <option key={breed}>{breed}</option>
